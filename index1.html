@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            background-color: #f4f4f4;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .answer {
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="question">What is Lorem Ipsum?</div>
+                <div class="answer">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Why do we use it?</div>
+                <div class="answer">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">Where does it come from?</div>
+                <div class="answer">Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var questions = document.querySelectorAll('.question');
+
+            questions.forEach(function (question) {
+                question.addEventListener('click', function () {
+                    var answer = this.nextElementSibling;
+
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
